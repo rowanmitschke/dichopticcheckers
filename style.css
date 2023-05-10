@@ -1,0 +1,154 @@
+.container {
+  width: 460px;
+  margin: 50px auto 0 auto;
+}
+.row {
+  height: 50px;
+  margin-bottom: 0px;
+}
+.row:nth-child(odd) .cell:nth-child(odd) {
+  background-color: black;
+}
+.row:nth-child(odd) .cell:nth-child(even) {
+  background-color: #2e2e2e;
+}
+.row:nth-child(even) .cell:nth-child(even) {
+  background-color: black;
+}
+.row:nth-child(even) .cell:nth-child(odd) {
+  background-color: #2e2e2e;
+}
+.cell {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  border: 1px solid black;
+  margin-right: 0px;
+}
+.cell .gamePiece {
+  width: 40px;
+  height: 40px;
+  margin: 5px 0 0 5px;
+  border-radius: 40px;
+  cursor: pointer;
+  position: relative;
+}
+.cell .gamePiece:after {
+  content: ' ';
+  position: absolute;
+  right: 0;
+  top: -5px;
+  height: 38px;
+  width: 38px;
+  border-radius: 40px;
+  pointer-events: none;
+}
+.cell.cell-b .gamePiece {
+  background-color: #000a94;
+}
+.cell.cell-b.k .gamePiece:after {
+  background-color: #444;
+  border: 0px solid black;
+}
+.cell.cell-r .gamePiece {
+  background-color: #d40000;
+}
+.cell.cell-r.k .gamePiece:after {
+  background-color: #d40000;
+  border: 0px solid black;
+}
+.cell.cell-ab .gamePiece,
+.cell.cell-ar .gamePiece {
+  background-color: #6a6aff;
+  box-shadow: 0px 0px 24px #b372e8;
+}
+.cell.cell-ab.k .gamePiece:after,
+.cell.cell-ar.k .gamePiece:after {
+  background-color: #6a6aff;
+  border: 0px solid black;
+}
+.cell.cell-h {
+  background-color: #b372e8 !important;
+}
+.cell.m .gamePiece {
+  background-color: green;
+}
+.board.r .cell-b .gamePiece {
+  opacity: 1;
+}
+.board.b .cell-r .gamePiece {
+  opacity: 1;
+}
+.board {
+  float: left;
+  transition-duration: 0.8s;
+  transition-property: transform;
+}
+/*.board.b {
+   transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}*/
+button {
+  display: block;
+  background-color: #ddd;
+  border: none;
+  color: #444;
+  padding: 20px;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 109px;
+  margin-right: 5px;
+  float: left;
+}
+button:hover {
+  background-color: #eee;
+}
+.clear {
+  clear: both;
+  float: none;
+}
+.pop {
+  position: absolute;
+  color: #000a94;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+.pop .internal {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  background-color: black;
+  border: 0px solid #ccc;
+  min-height: 300px;
+  margin-top: 50px;
+  padding: 50px;
+}
+.pop .internal .close {
+  padding: 0 5px;
+  position: absolute;
+  right: 0;
+  width: auto;
+  top: 0;
+}
+.stats {
+  width: 211px;
+  border: 0px solid #ccc;
+  display: inline-block;
+  margin-top: 10px;
+  height: 51px;
+  padding: 5px;
+  font-family: sans-serif;
+  color: #444;
+}
+.stats .half {
+  width: 49%;
+  display: inline-block;
+  text-align: center;
+}
+.stats .half:first-child {
+  border-right: 0px solid #ccc;
+}
